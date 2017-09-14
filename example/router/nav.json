@@ -45,6 +45,12 @@
         "icon": "spinner"
       },
       {
+        "path": "/flow",
+        "name": "Flow",
+        "description": "flow",
+        "icon": "spinner"
+      },
+      {
         "path": "/swipe",
         "name": "Swipe",
         "description": "轮播",
