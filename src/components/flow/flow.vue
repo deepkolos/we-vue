@@ -227,57 +227,33 @@
 </template>
 
 <script>
-  //  import "wepayui/dist/wepayui/css/wepayui.css"
-
-
   export default {
     name: 'wv-flow',
 
     props: {
-//      type: {
-//        type: String,
-//        default: 'ios'
-//      },
-//      title: String,
-//      actions: {
-//        type: Array,
-//        default: []
-//      },
-//      cancelText: {
-//        type: String,
-//        default: 'Cancel'
-//      }
+      type: {
+        type: String,
+        default: 'horizontal'
+      },
+      bubblePosition: {
+        type: String,
+        default: 'top'
+      },
+      labelPosition: {
+        type: String,
+        default: 'bottom'
+      }
     },
 
     data() {
       return {
-        currentValue: this.value
       }
     },
 
     watch: {
-      currentValue(val) {
-        this.$emit('input', val)
-      },
-
-      value(val) {
-        this.currentValue = val
-      }
     },
 
     methods: {
-      itemClick(item) {
-        if (item.method && typeof item.method === 'function') {
-          item.method()
-        }
-        this.currentValue = false
-      }
-    },
-
-    mounted() {
-      if (this.value) {
-        this.currentValue = true
-      }
     }
   }
 </script>
